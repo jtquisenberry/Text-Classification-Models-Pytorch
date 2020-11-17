@@ -11,3 +11,4 @@ class Config(object):
     batch_size = 128
     seq_len = None # Sequence length for RNN
     dropout_keep = 0.8
+    max_sen_len = 30

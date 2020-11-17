@@ -25,7 +25,8 @@ if __name__=='__main__':
     
     # Create Model with specified optimizer and loss function
     ##############################################################
-    model = RCNN(config, len(dataset.vocab), dataset.word_embeddings)CowshelW    if torch.cuda.is_available():
+    model = RCNN(config, len(dataset.vocab), dataset.word_embeddings)
+    if torch.cuda.is_available():
         model.cuda()
     model.train()
     optimizer = optim.SGD(model.parameters(), lr=config.lr)
